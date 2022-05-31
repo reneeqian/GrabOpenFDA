@@ -10,7 +10,7 @@ classdef topenFDAStoredProperties < matlab.unittest.TestCase
                 testCase.addTeardown(@()setpref('openFDA', 'AccessToken', at));
                 rmpref('openFDA', 'AccessToken');
             else
-                testCase.addTeardown(@()rmpref('openFDA', 'AccessToken'));
+%                 testCase.addTeardown(@()rmpref('openFDA', 'AccessToken'));
             end
             
         end
