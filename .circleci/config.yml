@@ -13,10 +13,13 @@ jobs:
       - checkout
       - matlab/install
       - matlab/run-tests:
-          test-results-junit: test-results/matlab/results.xml
+          test-results-junit: artifacts/junit/testResults.xml
+          test-results-pdf: artifacts/pdf/testResults.pdf
       - store_test_results:
-          path: test-results
-          
+          path: artifacts/junit
+      - store_artifacts:
+          path: artifacts
+
 workflows:
   build:
     jobs:
