@@ -59,7 +59,12 @@ classdef topenFDAStoredProperties < matlab.unittest.TestCase
             g = openFDA;
             g.AccessToken = "Hello World";
             testCase.verifyMatches(g.AccessToken, "Hell*******")            
-        end        
+        end      
+
+        % Test that just breaks
+        function breakme(testCase)
+            testCase.verifyTrue(false)
+        end
         
     end
  
